@@ -1,23 +1,19 @@
-/**
- * ClientHandler.java
- *
- * This class handles communication between the client
- * and the server.  It runs in a separate thread but has a
- * link to a common list of sockets to handle broadcast.
- *
- */
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
 import java.net.Socket;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+/**
+ * ClientHandler.java
+ *
+ * <p>This class handles communication between the client
+ * and the server.  It runs in a separate thread but has a
+ * link to a common list of sockets to handle broadcast.
+ *
+ */
 public class ClientHandler implements Runnable {
   private Socket connectionSock = null;
   private ArrayList<Socket> socketList;
